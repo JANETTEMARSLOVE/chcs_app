@@ -7,6 +7,14 @@
     android:background="@android:color/system_accent1_700"
     tools:context=".LoginActivity">
 
+    <ImageView
+        android:id="@+id/image_circle"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/circle1"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/welcome"
         android:layout_width="match_parent"
@@ -15,8 +23,7 @@
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/image_circle"/>
     <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
@@ -37,14 +44,41 @@
         app:layout_constraintTop_toBottomOf="@+id/email"/>
     <Button
         android:id="@+id/loginText"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/design_default_color_secondary"
+        android:backgroundTint="#03A9F4"
         android:text="Login"
         android:textSize="30sp"
-        android:layout_marginBottom="65dp"
+        android:layout_marginBottom="200dp"
+        android:paddingHorizontal="75dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
+    <Button
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:text="Forgot Password?"
+        android:textSize="19sp"
+        android:layout_marginBottom="65dp"
+        android:paddingHorizontal="75dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginText"/>
+    <Button
+        android:id="@+id/createNewAcct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:text="Create New Account"
+        android:textSize="18sp"
+        android:layout_marginBottom="65dp"
+        android:paddingHorizontal="75dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forgotPassword"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
